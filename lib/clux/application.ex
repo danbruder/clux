@@ -17,7 +17,9 @@ defmodule Clux.Application do
       # Start Finch
       {Finch, name: Clux.Finch},
       # Start the Endpoint (http/https)
-      CluxWeb.Endpoint
+      CluxWeb.Endpoint,
+      # Stuart the chrome tracker
+      {CluxWeb.ChromeTracker, [name: CluxWeb.ChromeTracker, pubsub_server: Clux.PubSub]}
       # Start a worker by calling: Clux.Worker.start_link(arg)
       # {Clux.Worker, arg}
     ]
