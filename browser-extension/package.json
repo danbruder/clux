@@ -1,0 +1,16 @@
+{
+  "name": "clux-chrome",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "esbuild main.js --bundle --outfile=background.js"
+  },
+  "devDependencies": {
+    "vite": "^2.9.9",
+    "esbuild": "^0.14.49"
+  },
+  "dependencies": {
+    "concurrently": "^7.2.2",
+    "phoenix": "^1.6.10"
+  }
+}

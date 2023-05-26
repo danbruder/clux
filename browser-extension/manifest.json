@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "GEX",
+    "description": "An extension for getting stuff out the browser",
+    "version": "0.0.1",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*/*"],
+            "css": [],
+            "js": ["content.js"]
+        }
+    ],
+    "permissions": ["scripting", "storage", "pageCapture", "tabs", "activeTab"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "/images/icon.png",
+        "32": "/images/icon.png",
+        "48": "/images/icon.png",
+        "128": "/images/icon.png"
+    }
+}
