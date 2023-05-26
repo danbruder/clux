@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:14
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    command: [ "postgres", "-c", "log_statement=all" ]
+
+volumes:
+  postgres_data:
